@@ -2,6 +2,8 @@ package com.qin.dot;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -209,7 +211,11 @@ public class Playground extends SurfaceView implements View.OnTouchListener {
         }
         paint.setColor(0xFFFF0000);
         paint.setTextSize(40);
-        c.drawText(newGame,WIDTH,WIDTH*11,paint);
+//        c.drawText(newGame,WIDTH,WIDTH*11,paint);
+
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.refresh);
+        c.drawBitmap(bmp, WIDTH*5, WIDTH*11, null);
+
         getHolder().unlockCanvasAndPost(c);
     }
 
@@ -266,7 +272,9 @@ public class Playground extends SurfaceView implements View.OnTouchListener {
                 x = (int) ((motionEvent.getX()-WIDTH/2)/WIDTH);
             }
             if (x+1 > COL || y+1 > ROW) {
-                if((x<3)&&(y>=10)&&(y<=12)){
+                System.out.println(x);
+                System.out.println(y);
+                if((x>=4)&&(x<=6)&&(y>=10)&&(y<=12)){
                     initGame();
                 }
             } else if(getDot(x, y).getStatus() == Dot.STATUS_OFF){

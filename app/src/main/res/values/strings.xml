@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Dot</string>
     <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="action_about">关于</string>
+    <string name="action_help">帮助</string>
+    <string name="app_intro">help</string>
+    <string name="app_intro_skip_button">Skip</string>
+    <string name="app_intro_done_button">Done</string>
+    <string name="encourage">点个赞？</string>
+    <string name="intro_refresh0">点击刷新</string>
+    <string name="intro_refresh1">，开始新的游戏</string>
+    <string name="intro_win">围住红点即获得胜利</string>
+    <string name="intro_inf2">红点会逃离你的包围</string>
+    <string name="intro_inf1">点击白点，将红点围起来</string>
+    <string name="intro_refresh2">当然，win or lose也会开始新的游戏</string>
 </resources>
